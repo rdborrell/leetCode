@@ -1,8 +1,10 @@
 package solutions.easy;
 
+import java.util.HashMap;
+
 public class MostWealth
 {
-    public int maximumWealth(int[][] accounts)
+    public void solve(int[][] accounts)
     {
         int runningTotal =0;
         int tempTotal =0;
@@ -18,6 +20,6 @@ public class MostWealth
             }
             tempTotal =0;
         }
-        return runningTotal;
+        System.out.println(runningTotal);
     }
 }
