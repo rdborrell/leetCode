@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class MostWealth
 {
-    public void solve(int[][] accounts)
+    public String solve(int[][] accounts)
     {
         int runningTotal =0;
         int tempTotal =0;
@@ -20,6 +20,7 @@ public class MostWealth
             }
             tempTotal =0;
         }
-        System.out.println(runningTotal);
+        String runningTotalAsString = String.valueOf(runningTotal);
+        return runningTotalAsString;
     }
 }

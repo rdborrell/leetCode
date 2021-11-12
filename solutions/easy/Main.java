@@ -11,6 +11,9 @@ public class Main implements ActionListener
     int clicks = 0;
     JLabel label;
     JPanel panel;
+    JTextField field;
+    MostWealth wealth;
+    int[][] testArray;
     public Main()
     {
         JFrame frame = new JFrame();
@@ -18,12 +21,13 @@ public class Main implements ActionListener
         JButton button = new JButton("Solve!");
         button.addActionListener(this);
         label = new JLabel("Solved!");
-        JTextField field = new JTextField();
+        field = new JTextField();
 
         panel = new JPanel();
         panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 10, 30));
         panel.setLayout(new GridLayout(0, 1));
         panel.add(field);
+        field.getText();
         panel.add(button);
         panel.add(label);
 
@@ -46,7 +50,8 @@ public class Main implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        clicks++;
-        label.setText("Number of clicks: " + clicks);
+        MostWealth wealth = new MostWealth();
+        int[][] testArray = {{2,8,7},{7,1,3},{1,9,5}};
+        label.setText(wealth.solve(testArray));
     }
 }
